@@ -1,0 +1,8 @@
+require("plugins.config.catppuccin")
+require("plugins.config.lualine")
+require("plugins.config.lsp")
+require("plugins.config.nvterm")
+require("plugins.config.oil")
+require("plugins.config.telescope")
+require("plugins.config.treesitter")
+require("plugins.config.ufo")
