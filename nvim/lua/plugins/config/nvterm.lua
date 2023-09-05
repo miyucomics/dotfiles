@@ -1,5 +1,0 @@
-require("nvterm").setup()
-vim.keymap.set("n", "<leader>th", function () require("nvterm.terminal").new("horizontal") end)
-vim.keymap.set("n", "<leader>tv", function () require("nvterm.terminal").new("vertical") end)
-vim.keymap.set("n", "<leader>tf", function () require("nvterm.terminal").toggle("float") end)
-vim.keymap.set("t", "<C-x>", function () vim.cmd.stopinsert() end)
