@@ -15,6 +15,10 @@
     "cpu",
     "pulseaudio",
   ],
+  "clock": {
+    "format": "{:%H:%M}",
+    "interval": 60
+  },
   "hyprland/window": {
     "format": " {}",
     "separate-outputs": false
@@ -49,9 +53,5 @@
       "default": ["", ""]
     },
     "scroll-step": 1
-  },
-  "clock": {
-    "format": "{:%H:%M}",
-    "interval": 60
   }
 }

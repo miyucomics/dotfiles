@@ -9,6 +9,9 @@ return {
     'L3MON4D3/LuaSnip'
   },
   opts = {
+    ensure_installed = {
+      "rust-analyzer"
+    },
     sources = {
       { name = "nvim_lsp" },
       { name = "crates "}
