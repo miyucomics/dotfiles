@@ -1,0 +1,8 @@
+#!/bin/bash
+
+yes | sudo pacman -Sc
+yes | sudo pacman -Scc 
+pacman -Qtdq | sudo pacman -Rns -
+pacman -Qqd | sudo pacman -Rsu -
+rm -rf $HOME/.cache/*
+rm -rf $HOME/.local/share/Trash/files/*
