@@ -3,13 +3,15 @@ local if_nil = vim.F.if_nil
 local header = {
     type = "text",
     val = {
-        [[                                                                  ]],
-        [[     _/      _/                      _/      _/  _/               ]],
-        [[    _/_/    _/    _/_/      _/_/    _/      _/      _/_/_/  _/_/  ]],
-        [[   _/  _/  _/  _/_/_/_/  _/    _/  _/      _/  _/  _/    _/    _/ ]],
-        [[  _/    _/_/  _/        _/    _/    _/  _/    _/  _/    _/    _/  ]],
-        [[ _/      _/    _/_/_/    _/_/        _/      _/  _/    _/    _/   ]],
-        [[                                                                  ]],
+        [[          ▀████▀▄▄              ▄█ ]],
+        [[            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ]],
+        [[    ▄        █          ▀▀▀▀▄  ▄▀  ]],
+        [[   ▄▀ ▀▄      ▀▄              ▀▄▀  ]],
+        [[  ▄▀    █     █▀   ▄█▀▄      ▄█    ]],
+        [[  ▀▄     ▀▄  █     ▀██▀     ██▄█   ]],
+        [[   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ]],
+        [[    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ]],
+        [[   █   █  █      ▄▄           ▄▀   ]],
     },
     opts = {
         position = "center",
@@ -17,28 +19,24 @@ local header = {
     },
 }
 
-local function button(sc, txt, keybind, keybind_opts)
-    local sc_ = sc:gsub("%s", ""):gsub("SPC", "<leader>")
+local function button(shortcut, txt, command)
+    local run = shortcut:gsub("%s", ""):gsub("SPC", "<leader>")
 
     local opts = {
         position = "center",
-        shortcut = sc,
+        shortcut = shortcut,
         cursor = 3,
         width = 50,
         align_shortcut = "right",
         hl_shortcut = "Keyword",
+        keymap = { "n", run, command, { noremap = true, silent = true, nowait = true } },
     }
-
-    if keybind then
-        keybind_opts = if_nil(keybind_opts, { noremap = true, silent = true, nowait = true })
-        opts.keymap = { "n", sc_, keybind, keybind_opts }
-    end
 
     return {
         type = "button",
         val = txt,
         on_press = function()
-            local key = vim.api.nvim_replace_termcodes(keybind or sc_ .. "<Ignore>", true, false, true)
+            local key = vim.api.nvim_replace_termcodes(run, true, false, true)
             vim.api.nvim_feedkeys(key, "t", false)
         end,
         opts = opts,
@@ -51,6 +49,8 @@ local buttons = {
         button("e", "  New file", "<cmd>ene <CR>"),
         button("SPC SPC", "󰈞  Find file", "<cmd>Telescope find_files<CR>"),
         button("SPC f h", "  Recent files", "<cmd>Telescope oldfiles<CR>"),
+        button("SPC f c", "🖌 Color scheme", "<cmd>Telescope colorscheme<CR>"),
+        button("SPC q", "ⓧ  Quit Neovim", "<cmd>wqa<CR>"),
     },
     opts = {
         spacing = 1,

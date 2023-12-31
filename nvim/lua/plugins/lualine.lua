@@ -4,7 +4,10 @@ return {
         options = {
             icons_enabled = true,
             theme = "catppuccin",
-            disabled_filetypes = { "alpha" },
+            disabled_filetypes = {
+                "alpha",
+                "TelescopePrompt",
+            },
         },
         sections = {
             lualine_x = { "filetype" },
