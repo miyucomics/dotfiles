@@ -1,5 +1,16 @@
-format = "$directory$character"
-palette = "mocha" 
+format = "$directory$python$character"
+palette = "mocha"
+
+[character]
+success_symbol = "[❯](bold blue)"
+error_symbol = "[❯](bold red)"
+
+[directory]
+style = "blue"
+read_only_style = "red"
+
+[python]
+format = "[($virtualenv )]($style)"
 
 [palettes.mocha]
 rosewater = "#f5e0dc"
