@@ -7,6 +7,7 @@ return {
             disabled_filetypes = {
                 "alpha",
                 "TelescopePrompt",
+                "terminal",
             },
         },
         sections = {
