@@ -2,27 +2,23 @@
   font-size: 13px;
 }
 
-#zen-current-workspace-indicator {
-  display: none;
-}
-
-.tab-close-button {
-  display: none !important;
-}
-
+.tab-close-button,
+#zen-current-workspace-indicator,
+#zen-sidebar-top-buttons-separator,
+#back-button, #forward-button,
 #zen-sidebar-icons-wrapper {
   display: none !important;
-}
-
-#zen-sidebar-top-buttons-separator,
-#back-button, #forward-button {
-  display: none;
 }
 
 #zen-sidebar-top-buttons-customization-target {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.tab-background,
+.tab-group-label-container {
+    transition: background-color 0.2s ease !important;
 }
 
 /* Catppuccin Mocha Blue userChrome.css*/
