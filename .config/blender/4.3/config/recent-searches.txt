@@ -1,0 +1,10 @@
+0 Geometry Nodes
+Mesh ▸ Cube
+Mesh ▸ Operations ▸ Dual Mesh
+Mesh ▸ Ico Sphere
+Mesh ▸ Monkey
+Empty ▸ Sphere
+Mesh ▸ UV Sphere
+Mesh ▸ Plane
+Deform ▸ Shrinkwrap
+  Plane
