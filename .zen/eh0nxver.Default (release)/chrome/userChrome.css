@@ -3,10 +3,9 @@
 }
 
 .tab-close-button,
-#zen-current-workspace-indicator,
+#zen-current-workspace-indicator-container,
 #zen-sidebar-top-buttons-separator,
-#back-button, #forward-button,
-#zen-sidebar-icons-wrapper {
+#back-button, #forward-button {
   display: none !important;
 }
 
@@ -24,6 +23,7 @@
 /* Catppuccin Mocha Blue userChrome.css*/
 
 @media (prefers-color-scheme: dark) {
+
   :root {
     --zen-colors-primary: #313244 !important;
     --zen-primary-color: #89b4fa !important;
