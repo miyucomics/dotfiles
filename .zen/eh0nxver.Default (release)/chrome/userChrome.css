@@ -2,6 +2,10 @@
   font-size: 13px;
 }
 
+tab-group .tabbrowser-tab:not(:first-of-type) {
+  margin-top: 5px !important;
+}
+
 .tab-close-button,
 #zen-current-workspace-indicator-container,
 #zen-sidebar-top-buttons-separator,
