@@ -19,11 +19,6 @@ tab-group .tabbrowser-tab:not(:first-of-type) {
   justify-content: space-around;
 }
 
-.tab-background,
-.tab-group-label-container {
-    transition: background-color 0.2s ease !important;
-}
-
 /* Catppuccin Mocha Blue userChrome.css*/
 
 @media (prefers-color-scheme: dark) {
