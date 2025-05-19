@@ -12,7 +12,7 @@ tab-group .tabbrowser-tab:not(:first-of-type) {
 }
 
 .tab-close-button,
-#zen-current-workspace-indicator-container,
+.zen-current-workspace-indicator,
 #zen-sidebar-top-buttons-separator,
 #back-button, #forward-button {
   display: none !important;
