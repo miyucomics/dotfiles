@@ -1,3 +1,8 @@
+.tabbrowser-tab[pending="true"] {
+    filter: grayscale(0.75);
+    opacity: 0.5;
+}
+
 #navigator-toolbox {
   font-size: 13px;
 }
@@ -7,7 +12,7 @@ tab-group .tabbrowser-tab:not(:first-of-type) {
 }
 
 .tab-close-button,
-#zen-current-workspace-indicator-container,
+.zen-current-workspace-indicator,
 #zen-sidebar-top-buttons-separator,
 #back-button, #forward-button {
   display: none !important;
