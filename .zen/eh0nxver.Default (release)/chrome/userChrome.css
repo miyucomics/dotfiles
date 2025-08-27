@@ -4,11 +4,11 @@
 }
 
 #navigator-toolbox {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 tab-group .tabbrowser-tab:not(:first-of-type) {
-  margin-top: 5px !important;
+  margin-top: 10px !important;
 }
 
 .tab-close-button,
